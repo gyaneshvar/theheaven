@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Heavens Banquet Lawn — Your dream venue for weddings, receptions & celebrations. Elegant lawns, world-class facilities and unforgettable memories." />
+  <meta name="author" content="Ram Singh" />
+  <meta name="theme-color" content="#1A1A1A" />
+
+  <!-- Open Graph (WhatsApp / Facebook link preview) -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="The Heavens Banquet Lawn" />
+  <meta property="og:description" content="Your dream venue for weddings, receptions &amp; grand celebrations." />
+  <meta property="og:image"       content="resources/home.webp" />
+  <meta property="og:url"         content="https://theheavensbanquetlawn.com" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="The Heavens Banquet Lawn" />
+  <meta name="twitter:description" content="Your dream venue for weddings, receptions &amp; grand celebrations." />
+  <meta name="twitter:image"       content="resources/home.webp" />
+
+  <title>The Heavens Banquet Lawn</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="resources/logo.png" />
+  <link rel="apple-touch-icon"      href="resources/logo.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ================================================
+       HAMBURGER TOGGLE (CSS-only open/close)
+       ================================================ -->
+  <input type="checkbox" id="hamburgerToggle" class="hamburger-checkbox" aria-hidden="true" />
+
+  <!-- ================================================
+       NAVBAR
+       ================================================ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+
+      <a href="#home" class="nav-logo" aria-label="The Heavens Banquet Lawn — home">
+        <img src="resources/logo.png" alt="The Heavens logo" width="44" height="44" />
+        <span class="nav-logo-text">
+          <span class="brand-name">The Heavens</span>
+          <span class="brand-sub">Banquet Lawn</span>
+        </span>
+      </a>
+
+      <!-- Hamburger button label (mobile) -->
+      <label for="hamburgerToggle" class="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="nav-cta">Book Now</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <!-- ================================================
+       HERO SECTION
+       ================================================ -->
+  <section id="home" class="hero" aria-labelledby="heroHeading">
+
+    <div class="hero-content">
+      <span class="hero-tagline">Welcome to</span>
+
+      <h1 id="heroHeading">The Heavens<br />Banquet Lawn</h1>
+
+      <!-- Gold decorative divider -->
+      <div class="hero-divider" aria-hidden="true">
+        <div class="hero-divider-line"></div>
+        <div class="hero-divider-diamond"></div>
+        <div class="hero-divider-line"></div>
+      </div>
+
+      <p class="hero-desc">
+        Where every celebration becomes an eternal memory.
+        Exquisite venue, impeccable service, unforgettable moments.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#gallery"  class="btn-primary">View Gallery</a>
+        <a href="#contact" class="btn-outline">Book Your Event</a>
+      </div>
+    </div>
+
+    <!-- Scroll hint arrow -->
+    <div class="scroll-hint" aria-hidden="true">
+      <div class="scroll-hint-arrow"></div>
+    </div>
+
+  </section>
+
+  <!-- ================================================
+       ABOUT STRIP
+       ================================================ -->
+  <section id="about" class="about-strip" aria-label="About The Heavens">
+    <div class="container">
+      <div class="ornament" aria-hidden="true">✦</div>
+      <h2 class="reveal">Your Dream Venue Awaits</h2>
+      <p class="reveal">
+        The Heavens Banquet Lawn is crafted for those who believe their special day
+        deserves nothing less than perfection. From intimate gatherings to grand
+        weddings, we create magical experiences that last a lifetime.
+      </p>
+
+      <!-- Stats row -->
+      <div class="stats-row stagger">
+        <div class="stat-item reveal">
+          <div class="num">500<span style="font-size:1.5rem">+</span></div>
+          <div class="label">Guest Capacity</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="num">10<span style="font-size:1.5rem">+</span></div>
+          <div class="label">Years of Joy</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="num">1000<span style="font-size:1.5rem">+</span></div>
+          <div class="label">Events Hosted</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="num">4.9<span style="font-size:1.5rem">★</span></div>
+          <div class="label">Avg. Rating</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       GALLERY — Full-width auto-playing slideshow
+       ================================================ -->
+  <section id="gallery" class="gallery" aria-labelledby="galleryHeading">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="ornament" aria-hidden="true">✦</div>
+        <h2 id="galleryHeading">Our Gallery</h2>
+        <p class="subtitle">A glimpse of the magic we create</p>
+      </div>
+    </div>
+
+    <!-- Slideshow — images injected by JS probe pattern -->
+    <div class="slideshow-wrapper" role="region" aria-label="Photo gallery slideshow">
+
+      <!-- Loading indicator (shown until images load) -->
+      <div id="slideshowLoading" class="slideshow-loading">
+        <div class="loading-spinner" aria-hidden="true"></div>
+        <span>Loading gallery…</span>
+      </div>
+
+      <!-- Slides track — JS injects .slide elements here -->
+      <div id="slidesTrack" class="slides-track" aria-live="polite"></div>
+
+      <!-- Prev / Next controls -->
+      <button id="btnPrev" class="slide-btn btn-prev" aria-label="Previous image">&#10094;</button>
+      <button id="btnNext" class="slide-btn btn-next" aria-label="Next image">&#10095;</button>
+
+    </div>
+
+    <!-- Dots + counter below the slideshow -->
+    <div class="container">
+      <div id="slideDots"    class="slide-dots"    role="tablist" aria-label="Gallery navigation dots"></div>
+      <div id="slideCounter" class="slide-counter" aria-live="polite"></div>
+    </div>
+
+  </section>
+
+  <!-- ================================================
+       SERVICES
+       ================================================ -->
+  <section id="services" class="services" aria-labelledby="servicesHeading">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="ornament" aria-hidden="true">✦</div>
+        <h2 id="servicesHeading">Our Facilities</h2>
+        <p class="subtitle">Everything you need for a perfect celebration</p>
+      </div>
+
+      <div class="services-grid stagger">
+
+        <div class="service-card reveal">
+          <span class="service-icon" aria-hidden="true">🌿</span>
+          <h3>Open Lawn</h3>
+          <p>Lush, manicured lawns dressed in greenery — perfect for outdoor ceremonies under the open sky.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <span class="service-icon" aria-hidden="true">🏛️</span>
+          <h3>Banquet Hall</h3>
+          <p>Elegant air-conditioned indoor hall accommodating 500+ guests with premium decor options.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <span class="service-icon" aria-hidden="true">🍽️</span>
+          <h3>In-House Catering</h3>
+          <p>Curated menus for every palate — from traditional feasts to modern multi-cuisine spreads.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <span class="service-icon" aria-hidden="true">🅿️</span>
+          <h3>Ample Parking</h3>
+          <p>Spacious, secure parking area ensuring a stress-free experience for all your guests.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <span class="service-icon" aria-hidden="true">💡</span>
+          <h3>Decor &amp; Lighting</h3>
+          <p>Stunning floral arrangements, fairy lights and custom stage setups for every theme.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <span class="service-icon" aria-hidden="true">🎶</span>
+          <h3>Sound &amp; Stage</h3>
+          <p>Professional sound system, DJ booth and stage setup for live performances.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       CONTACT & MAP
+       ================================================ -->
+  <section id="contact" class="contact" aria-labelledby="contactHeading">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <div class="ornament" aria-hidden="true">✦</div>
+        <h2 id="contactHeading">Get in Touch</h2>
+        <p class="subtitle">We'd love to make your special day unforgettable</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- ---- Contact Info ---- -->
+        <div class="contact-info reveal-left">
+          <h3>Venue Details</h3>
+
+          <div class="info-item">
+            <span class="info-icon" aria-hidden="true">👤</span>
+            <div class="info-text">
+              <strong>Owner</strong>
+              Ram Singh
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon" aria-hidden="true">📞</span>
+            <div class="info-text">
+              <strong>Phone / Mobile</strong>
+              <a href="tel:+9190909989909">+91 90909 89909</a>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon" aria-hidden="true">💬</span>
+            <div class="info-text">
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/919090989909" target="_blank" rel="noopener">Chat on WhatsApp</a>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon" aria-hidden="true">📍</span>
+            <div class="info-text">
+              <strong>Address</strong>
+              <!-- TODO: Add full address here -->
+              Coming Soon
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon" aria-hidden="true">✉️</span>
+            <div class="info-text">
+              <strong>Email</strong>
+              <!-- TODO: Add email address -->
+              <a href="mailto:info@theheavensbanquet.com">info@theheavensbanquet.com</a>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon" aria-hidden="true">🕐</span>
+            <div class="info-text">
+              <strong>Hours</strong>
+              Open daily &mdash; 9:00 AM to 10:00 PM
+            </div>
+          </div>
+
+          <!-- WhatsApp CTA -->
+          <a href="https://wa.me/919090989909?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20booking%20the%20venue."
+             class="whatsapp-btn"
+             target="_blank"
+             rel="noopener"
+             aria-label="Chat on WhatsApp with Ram Singh">
+            <!-- WhatsApp SVG icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+
+        <!-- ---- Contact Form + Map ---- -->
+        <div class="reveal-right" style="display:flex; flex-direction:column; gap:1.75rem;">
+
+          <!-- Contact form (Formspree) -->
+          <div class="contact-form-wrap">
+            <h3>Send an Enquiry</h3>
+            <!-- TODO: Replace action URL with your Formspree form endpoint -->
+            <!-- Sign up free at https://formspree.io, create a form, paste the action URL below -->
+            <form id="contactForm"
+                  action="https://formspree.io/f/YOUR_FORM_ID"
+                  method="POST"
+                  novalidate>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fname">Name</label>
+                  <input type="text" id="fname" name="name" placeholder="Your name" required />
+                </div>
+                <div class="form-group">
+                  <label for="fphone">Phone</label>
+                  <input type="tel" id="fphone" name="phone" placeholder="+91 XXXXX XXXXX" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="femail">Email</label>
+                <input type="email" id="femail" name="email" placeholder="your@email.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="fevent">Event Type</label>
+                <select id="fevent" name="event_type">
+                  <option value="">Select event type…</option>
+                  <option>Wedding / Shaadi</option>
+                  <option>Reception</option>
+                  <option>Engagement / Sagai</option>
+                  <option>Birthday Party</option>
+                  <option>Corporate Event</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="fdate">Preferred Date</label>
+                <input type="date" id="fdate" name="preferred_date" />
+              </div>
+
+              <div class="form-group">
+                <label for="fmsg">Message</label>
+                <textarea id="fmsg" name="message" placeholder="Tell us about your event…"></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary" style="width:100%; font-size:0.9rem; padding:0.9rem;">
+                Send Enquiry
+              </button>
+            </form>
+          </div>
+
+          <!-- Map -->
+          <div class="map-wrap">
+            <!-- TODO: Replace with your exact Google Maps embed URL after confirming address -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.0!2d80.9!3d26.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sThe+Heavens+Banquet+Lawn!5e0!3m2!1sen!2sin!4v1"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="The Heavens Banquet Lawn — Map location">
+            </iframe>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       FOOTER
+       ================================================ -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+
+      <!-- Logo -->
+      <div class="footer-logo">
+        <img src="resources/logo.png" alt="The Heavens Banquet Lawn logo" width="48" height="48" />
+        <div class="footer-logo-text">
+          <div class="brand-name">The Heavens</div>
+          <div class="brand-sub">Banquet Lawn</div>
+        </div>
+      </div>
+
+      <!-- Nav links -->
+      <nav aria-label="Footer navigation">
+        <ul class="footer-links" role="list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Social icons -->
+      <div class="social-icons" aria-label="Social media links">
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/919090989909?text=Hello%2C%20I%20would%20like%20to%20book%20the%20venue."
+           class="social-icon whatsapp"
+           target="_blank"
+           rel="noopener"
+           aria-label="WhatsApp — Chat with us">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+        </a>
+
+        <!-- Instagram -->
+        <!-- TODO: Replace href with your Instagram profile URL -->
+        <a href="https://instagram.com/theheavensbanquetlawn"
+           class="social-icon"
+           target="_blank"
+           rel="noopener"
+           aria-label="Instagram — Follow us">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4.5"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+
+        <!-- Facebook -->
+        <!-- TODO: Replace href with your Facebook page URL -->
+        <a href="https://facebook.com/theheavensbanquetlawn"
+           class="social-icon"
+           target="_blank"
+           rel="noopener"
+           aria-label="Facebook — Like our page">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </a>
+
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 The Heavens Banquet Lawn. All rights reserved.</span>
+        <span>&bull;</span>
+        <span>Owner: Ram Singh &nbsp;|&nbsp; <a href="tel:+9190909989909" style="color:inherit">+91 90909 89909</a></span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>
