@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://theheaven.co.in/sitemap.xml
