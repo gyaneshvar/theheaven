@@ -77,7 +77,10 @@ export default function Contact() {
                 />
                 <div>
                   <strong className="block text-[0.68rem] tracking-[1.5px] uppercase text-gold-dark mb-0.5">Owner</strong>
-                  <span className="text-gray-800 font-medium text-sm">Ram Singh</span>
+                  <span className="text-gray-800 font-medium text-sm block">Ram Singh</span>
+                  <a href="tel:+919651370469" className="text-gray-600 text-xs hover:text-gold-dark transition-colors">
+                    +91 96513 70469
+                  </a>
                 </div>
               </div>
 
@@ -95,10 +98,6 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-
-            <InfoRow icon="📞" label="Phone / Mobile">
-              <a href="tel:+919651370469" className="hover:text-gold-dark transition-colors">+91 96513 70469</a>
-            </InfoRow>
 
             <InfoRow icon="💬" label="WhatsApp">
               <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="hover:text-gold-dark transition-colors">
