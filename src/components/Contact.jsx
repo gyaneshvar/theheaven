@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 
 const WA_NUM = '919651370469'
@@ -31,6 +31,34 @@ const labelCls = 'block text-[0.73rem] tracking-wide uppercase text-gray-500 fon
 export default function Contact() {
   const ref    = useRef(null)
   const inView  = useInView(ref, { once: true, margin: '-80px' })
+  const [result, setResult] = useState('')
+
+  const onSubmit = async (event) => {
+    event.preventDefault()
+    setResult('Sending...')
+
+    const formData = new FormData(event.target)
+    formData.append('access_key', '488a230e-ec44-4733-952f-db000c11f0e2')
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+      })
+
+      const data = await response.json()
+
+      if (data.success) {
+        setResult('Enquiry sent successfully.')
+        event.target.reset()
+        return
+      }
+
+      setResult('Unable to send enquiry right now.')
+    } catch {
+      setResult('Unable to send enquiry right now.')
+    }
+  }
 
   return (
     <section id="contact" className="py-24 bg-off-white" aria-labelledby="contactHeading">
@@ -142,7 +170,10 @@ export default function Contact() {
             {/* Enquiry form */}
             <div className="bg-white rounded-2xl p-7 sm:p-8 shadow-sm border border-gold/15">
               <h3 className="text-dark text-[1.25rem] mb-6">Send an Enquiry</h3>
-              <form action="https://formspree.io/f/xbdzybra" method="POST" noValidate>
+              <form onSubmit={onSubmit} noValidate>
+                <input type="hidden" name="access_key" value="488a230e-ec44-4733-952f-db000c11f0e2" />
+                <input type="hidden" name="subject" value="New enquiry from The Heavens website" />
+                <input type="hidden" name="from_name" value="The Heavens Website" />
 
                 <div className="grid sm:grid-cols-2 gap-4 mb-4">
                   <div>
@@ -197,6 +228,10 @@ export default function Contact() {
                 >
                   Send Enquiry
                 </button>
+
+                <p className="mt-3 text-sm text-gray-500 min-h-5" aria-live="polite">
+                  {result}
+                </p>
               </form>
             </div>
 
