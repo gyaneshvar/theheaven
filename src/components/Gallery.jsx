@@ -42,24 +42,23 @@ export default function Gallery() {
     if (Math.abs(diff) > SWIPE_THRESHOLD) diff > 0 ? next() : prev()
   }
 
-    return (
-    <section id="gallery" className="py-20 bg-off-white" aria-labelledby="galleryHeading">
+  return (
+    <section id="gallery" className="py-24 bg-off-white" aria-labelledby="galleryHeading">
 
-      {/* Section header */}
-      <div className="max-w-[1300px] mx-auto px-5 mb-10 text-center">
+      <div className="section-shell mb-11 text-center">
         <div className="flex items-center justify-center gap-4 mb-5" aria-hidden="true">
           <div className="flex-1 max-w-[80px] h-px bg-gold/50" />
           <span className="text-gold text-xl">✦</span>
           <div className="flex-1 max-w-[80px] h-px bg-gold/50" />
         </div>
-        <h2 id="galleryHeading" className="text-dark text-3xl sm:text-4xl">Our Gallery</h2>
-        <p className="text-gray-500 italic text-sm mt-2">A glimpse of the magic we create</p>
+        <p className="section-kicker mb-4">Visual Experience</p>
+        <h2 id="galleryHeading" className="text-dark text-4xl sm:text-5xl text-balance">A Venue That Looks As Grand As It Feels</h2>
+        <p className="text-gray-600 text-sm mt-3">Swipe or use controls to explore our spaces</p>
       </div>
 
-      {/* Slideshow */}
       <div
-        className="relative w-full overflow-hidden bg-dark"
-        style={{ height: 'clamp(260px, 55vw, 580px)' }}
+        className="relative w-full overflow-hidden bg-dark border-y border-gold/20"
+        style={{ height: 'clamp(290px, 58vw, 620px)' }}
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
         role="region"
@@ -81,29 +80,27 @@ export default function Gallery() {
               alt={`The Heavens Banquet Lawn — photo ${idx + 1}`}
               className="w-full h-full object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/35 to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20 pointer-events-none" />
           </motion.div>
         </AnimatePresence>
 
-        {/* Prev / Next */}
         <button
           onClick={prev}
           aria-label="Previous image"
-          className="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gold/20 border border-gold/50 text-white flex items-center justify-center hover:bg-gold/55 active:scale-95 transition-all backdrop-blur-sm text-base sm:text-lg"
+          className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-10 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-black/35 border border-gold/50 text-white flex items-center justify-center hover:bg-gold/65 active:scale-95 transition-all backdrop-blur-sm text-base sm:text-lg"
         >
           &#10094;
         </button>
         <button
           onClick={next}
           aria-label="Next image"
-          className="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gold/20 border border-gold/50 text-white flex items-center justify-center hover:bg-gold/55 active:scale-95 transition-all backdrop-blur-sm text-base sm:text-lg"
+          className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-10 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-black/35 border border-gold/50 text-white flex items-center justify-center hover:bg-gold/65 active:scale-95 transition-all backdrop-blur-sm text-base sm:text-lg"
         >
           &#10095;
         </button>
       </div>
 
-      {/* Dots + counter */}
-      <div className="max-w-[1300px] mx-auto px-5">
+      <div className="section-shell">
         <div
           className="flex justify-center gap-2 pt-4"
           role="tablist"
@@ -128,7 +125,6 @@ export default function Gallery() {
           {idx + 1} / {IMAGES.length}
         </p>
       </div>
-
     </section>
   )
 }

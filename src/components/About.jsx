@@ -21,7 +21,7 @@ function StatItem({ num, label, index }) {
       className="text-center min-w-[110px]"
     >
       <div className="font-display text-gold text-4xl sm:text-5xl leading-none">{num}</div>
-      <div className="text-white/45 text-[0.72rem] tracking-[2.5px] uppercase mt-2">{label}</div>
+      <div className="text-[#525a66] text-[0.72rem] tracking-[2.1px] uppercase mt-2">{label}</div>
     </motion.div>
   )
 }
@@ -31,60 +31,62 @@ export default function About() {
   const inView  = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section id="about" className="bg-dark py-24 px-6 text-center" aria-label="About The Heavens">
-      <div className="max-w-4xl mx-auto">
-
-        {/* Ornament */}
-        <div className="flex items-center justify-center gap-4 mb-6" aria-hidden="true">
-          <div className="flex-1 max-w-[80px] h-px bg-gold/40" />
-          <span className="text-gold text-xl">✦</span>
-          <div className="flex-1 max-w-[80px] h-px bg-gold/40" />
-        </div>
-
+    <section id="about" className="bg-dark py-24 lg:py-28" aria-label="About The Heavens">
+      <div className="section-shell grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-start">
         <div ref={ref}>
+          <p className="section-kicker mb-4 text-gold-light">About The Venue</p>
           <motion.h2
             initial={{ opacity: 0, y: 28 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="text-white text-3xl sm:text-4xl mb-5"
+            className="text-white text-4xl sm:text-5xl mb-6 text-balance"
           >
-            Your Dream Venue in Varanasi
+            The celebration destination trusted by Varanasi families.
           </motion.h2>
 
           <motion.p
             initial={{ opacity: 0, y: 24 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="text-white/68 text-[1.05rem] max-w-2xl mx-auto mb-4 leading-relaxed"
+            className="text-white/75 text-[1.03rem] max-w-2xl mb-5 leading-relaxed"
           >
-            <strong className="text-white font-semibold">The Heaven Banquet Lawn</strong>, located at Bada Lalpur,
-            Chandmari, Varanasi, is crafted for those who believe their special day deserves nothing less than
-            perfection. From intimate gatherings to grand weddings and receptions, we create magical experiences
-            that last a lifetime — right here in the heart of Varanasi, Uttar Pradesh.
+            The Heaven Banquet Lawn at Bada Lalpur, Chandmari, is designed to
+            host everything from heartfelt rituals to large receptions with
+            graceful flow, warm service, and flexible decor direction.
           </motion.p>
 
-          {/* SEO keyword row — visually subtle, semantically valid */}
+          <motion.p
+            initial={{ opacity: 0, y: 24 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            className="text-white/68 text-[1rem] max-w-2xl mb-8 leading-relaxed"
+          >
+            Our team plans every detail around your family, culture, and
+            timeline so your day feels effortless from welcome to farewell.
+          </motion.p>
+
           <motion.p
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-white/25 text-[0.78rem] leading-loose max-w-3xl mx-auto mb-12"
+            className="text-white/30 text-[0.76rem] leading-loose max-w-3xl"
           >
-            Marriage lawn Varanasi &nbsp;·&nbsp; Engagement lawn Varanasi &nbsp;·&nbsp;
-            Birthday party lawn Varanasi &nbsp;·&nbsp; Reception hall Varanasi &nbsp;·&nbsp;
-            Sangeet venue Varanasi &nbsp;·&nbsp; Ring ceremony lawn &nbsp;·&nbsp;
-            Kitty party venue &nbsp;·&nbsp; Corporate event hall Varanasi &nbsp;·&nbsp;
-            Anniversary party lawn &nbsp;·&nbsp; Naming ceremony venue &nbsp;·&nbsp;
-            Banquet hall Bada Lalpur Chandmari &nbsp;·&nbsp; Lawn near Ring Road Varanasi &nbsp;·&nbsp;
-            Marriage lawn near Airhe, Varanasi 221003
+            Marriage lawn Varanasi · Engagement lawn Varanasi · Birthday party lawn Varanasi · Reception hall Varanasi ·
+            Sangeet venue Varanasi · Ring ceremony lawn · Kitty party venue · Corporate event hall Varanasi ·
+            Anniversary party lawn · Naming ceremony venue · Banquet hall Bada Lalpur Chandmari · Lawn near Ring Road Varanasi
           </motion.p>
         </div>
 
-        {/* Stats */}
-        <div className="flex flex-wrap justify-center gap-10 sm:gap-16">
-          {STATS.map((s, i) => <StatItem key={s.label} {...s} index={i} />)}
+        <div className="lux-panel rounded-2xl p-7 sm:p-9">
+          <div className="grid grid-cols-2 gap-6 sm:gap-8">
+            {STATS.map((s, i) => <StatItem key={s.label} {...s} index={i} />)}
+          </div>
+          <div className="mt-8 pt-6 border-t border-gold/25 text-sm text-[#3f4650]">
+            Located near Ring Road, The Heavens offers easy access, spacious
+            parking, and event-ready infrastructure for a seamless guest
+            experience.
+          </div>
         </div>
-
       </div>
     </section>
   )

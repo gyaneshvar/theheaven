@@ -16,17 +16,17 @@ function WhatsAppIcon() {
 function InfoRow({ icon, label, children }) {
   return (
     <div className="flex items-start gap-3.5 mb-5">
-      <span className="text-xl flex-shrink-0 w-7 text-center mt-0.5" aria-hidden="true">{icon}</span>
+      <span className="text-sm flex-shrink-0 w-7 h-7 rounded-full bg-gold/15 text-gold-dark grid place-items-center mt-0.5" aria-hidden="true">{icon}</span>
       <div>
-        <strong className="block text-[0.7rem] tracking-[1.5px] uppercase text-gold-dark mb-0.5">{label}</strong>
-        <div className="text-gray-700 text-[0.9rem] leading-relaxed">{children}</div>
+        <strong className="block text-[0.68rem] tracking-[2px] uppercase text-gold-dark mb-0.5">{label}</strong>
+        <div className="text-[#424a55] text-[0.92rem] leading-relaxed">{children}</div>
       </div>
     </div>
   )
 }
 
-const inputCls = 'w-full px-3.5 py-2.5 border border-gold/30 rounded text-sm text-gray-800 bg-off-white focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all'
-const labelCls = 'block text-[0.73rem] tracking-wide uppercase text-gray-500 font-semibold mb-1.5'
+const inputCls = 'w-full px-3.5 py-2.5 border border-gold/25 rounded text-sm text-gray-800 bg-[#f7f4ed] focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all'
+const labelCls = 'block text-[0.68rem] tracking-[2px] uppercase text-gray-500 font-semibold mb-1.5'
 
 export default function Contact() {
   const ref    = useRef(null)
@@ -64,40 +64,38 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-24 bg-off-white" aria-labelledby="contactHeading">
-      <div className="max-w-[1300px] mx-auto px-5">
+      <div className="section-shell">
 
-        {/* Header */}
         <div className="text-center mb-14" ref={ref}>
           <div className="flex items-center justify-center gap-4 mb-5" aria-hidden="true">
             <div className="flex-1 max-w-[80px] h-px bg-gold/50" />
             <span className="text-gold text-xl">✦</span>
             <div className="flex-1 max-w-[80px] h-px bg-gold/50" />
           </div>
+          <p className="section-kicker mb-4">Plan Your Date</p>
           <motion.h2
             id="contactHeading"
             initial={{ opacity: 0, y: 28 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="text-dark text-3xl sm:text-4xl"
+            className="text-dark text-4xl sm:text-5xl"
           >
-            Get in Touch
+            Start Your Booking Conversation
           </motion.h2>
-          <p className="text-gray-500 italic text-sm mt-2">We'd love to make your special day unforgettable</p>
+          <p className="text-gray-600 text-sm mt-3">Tell us your date, guest count, and event type. We will guide everything else.</p>
         </div>
 
         <div className="grid md:grid-cols-[1fr_1.45fr] gap-12 lg:gap-16">
 
-          {/* ── Left: Contact info ── */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+            className="lux-panel rounded-2xl p-6 sm:p-8"
           >
-            <h3 className="text-dark text-[1.35rem] mb-5 pb-3 border-b border-gold/25">Venue Details</h3>
+            <h3 className="text-dark text-[1.45rem] mb-5 pb-3 border-b border-gold/25">Venue Details</h3>
 
-            {/* Owner + Manager cards */}
             <div className="grid grid-cols-2 gap-4 mb-6">
-              {/* Owner */}
               <div className="flex items-center gap-3">
                 <img
                   src="/resources/owner.png"
@@ -114,7 +112,6 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Manager */}
               <div className="flex items-center gap-3">
                 <div className="w-[60px] h-[60px] rounded-full bg-dark-mid border-2 border-gold flex-shrink-0 flex items-center justify-center">
                   <span className="font-display text-gold text-xl font-semibold select-none">VK</span>
@@ -129,28 +126,27 @@ export default function Contact() {
               </div>
             </div>
 
-            <InfoRow icon="💬" label="WhatsApp">
+            <InfoRow icon="W" label="WhatsApp">
               <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="hover:text-gold-dark transition-colors">
                 Chat on WhatsApp
               </a>
             </InfoRow>
 
-            <InfoRow icon="📍" label="Address">
+            <InfoRow icon="A" label="Address">
               Near KGF Restaurant, Ring Road, Bada Lalpur, Chandmari,<br />
               Airhe, Varanasi, Uttar Pradesh 221003
             </InfoRow>
 
-            <InfoRow icon="✉️" label="Email">
+            <InfoRow icon="E" label="Email">
               <a href="mailto:info@theheavensbanquet.com" className="hover:text-gold-dark transition-colors">
                 info@theheavensbanquet.com
               </a>
             </InfoRow>
 
-            <InfoRow icon="🕐" label="Hours">
+            <InfoRow icon="T" label="Hours">
               Open daily — 9:00 AM to 10:00 PM
             </InfoRow>
 
-            {/* WhatsApp CTA */}
             <a
               href={WA_URL}
               target="_blank"
@@ -162,15 +158,13 @@ export default function Contact() {
             </a>
           </motion.div>
 
-          {/* ── Right: Form + Map ── */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="flex flex-col gap-7"
           >
-            {/* Enquiry form */}
-            <div className="bg-white rounded-2xl p-7 sm:p-8 shadow-sm border border-gold/15">
+            <div className="lux-panel rounded-2xl p-7 sm:p-8">
               <h3 className="text-dark text-[1.25rem] mb-6">Send an Enquiry</h3>
               <form onSubmit={onSubmit} noValidate>
                 <input type="hidden" name="access_key" value="488a230e-ec44-4733-952f-db000c11f0e2" />
@@ -228,7 +222,7 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full bg-gold text-dark font-bold text-[0.875rem] tracking-[2px] uppercase py-3.5 rounded hover:bg-gold-light transition-colors shadow-[0_4px_20px_rgba(200,168,96,0.35)]"
+                  className="w-full bg-gold text-dark font-bold text-[0.8rem] tracking-[2.4px] uppercase py-3.5 rounded hover:bg-gold-light transition-colors shadow-[0_4px_20px_rgba(200,168,96,0.35)]"
                 >
                   Send Enquiry
                 </button>
@@ -239,8 +233,7 @@ export default function Contact() {
               </form>
             </div>
 
-            {/* Map */}
-            <div className="rounded-2xl overflow-hidden shadow-sm border border-gold/20" style={{ height: 300 }}>
+            <div className="rounded-2xl overflow-hidden shadow-sm border border-gold/25" style={{ height: 300 }}>
               <iframe
                 src="https://maps.google.com/maps?q=9XPC%2B6P+Varanasi,+Uttar+Pradesh&output=embed&z=17"
                 allowFullScreen

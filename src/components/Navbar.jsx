@@ -22,36 +22,34 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 h-[70px] flex items-center px-6 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 h-[78px] flex items-center px-5 transition-all duration-400 ${
         scrolled
-          ? 'bg-dark/[.97] backdrop-blur-md shadow-[0_2px_20px_rgba(0,0,0,0.45)] border-b border-gold/30'
+          ? 'bg-dark/90 backdrop-blur-md shadow-[0_12px_30px_rgba(6,8,11,0.55)] border-b border-gold/25'
           : 'bg-transparent'
       }`}
       role="navigation"
       aria-label="Main navigation"
     >
       <div className="flex items-center justify-between w-full max-w-[1300px] mx-auto">
-        {/* Logo */}
-        <a href="#home" className="flex items-center gap-3" aria-label="The Heavens Banquet Lawn — home">
+        <a href="#home" className="flex items-center gap-3" aria-label="The Heavens Banquet Lawn home">
           <img
             src="/resources/logo.png"
             alt="The Heavens logo"
             width={44} height={44}
-            className="w-11 h-11 rounded-full border border-gold/60 p-0.5 object-contain"
+            className="w-11 h-11 rounded-full border border-gold/50 p-0.5 object-contain"
           />
           <div className="flex flex-col leading-none gap-0.5">
             <span className="font-display text-white text-[1.05rem] tracking-wide">The Heavens</span>
-            <span className="text-gold-light text-[0.6rem] tracking-[2px] uppercase">Banquet Lawn</span>
+            <span className="text-gold-light text-[0.58rem] tracking-[2.7px] uppercase">Banquet Lawn</span>
           </div>
         </a>
 
-        {/* Desktop links */}
         <ul className="hidden md:flex items-center gap-8" role="list">
           {NAV_LINKS.map(({ label, href }) => (
             <li key={href}>
               <a
                 href={href}
-                className="relative text-white/80 text-[0.8125rem] tracking-[1.5px] uppercase font-semibold hover:text-gold-light transition-colors duration-200 group"
+                className="relative text-white/80 text-[0.74rem] tracking-[2.5px] uppercase font-semibold hover:text-gold-light transition-colors duration-200 group"
               >
                 {label}
                 <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-gold group-hover:w-full transition-all duration-300" />
@@ -61,14 +59,13 @@ export default function Navbar() {
           <li>
             <a
               href="#contact"
-              className="bg-gold text-dark text-[0.8125rem] tracking-[1.5px] uppercase font-bold px-4 py-2 rounded hover:bg-gold-light transition-colors duration-200"
+              className="bg-gold text-dark text-[0.74rem] tracking-[2.5px] uppercase font-bold px-4 py-2.5 rounded hover:bg-gold-light transition-colors duration-200"
             >
               Book Now
             </a>
           </li>
         </ul>
 
-        {/* Hamburger */}
         <button
           className="md:hidden flex flex-col gap-[5px] p-2 z-10"
           onClick={() => setMenuOpen(v => !v)}
@@ -81,7 +78,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -89,7 +85,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.22, ease: 'easeOut' }}
-            className="absolute top-[70px] left-0 right-0 bg-dark/[.97] backdrop-blur-md border-b border-gold/20 py-5 px-6 md:hidden"
+            className="absolute top-[78px] left-0 right-0 bg-dark/95 backdrop-blur-md border-b border-gold/20 py-6 px-6 md:hidden"
           >
             <ul className="flex flex-col gap-5" role="list">
               {NAV_LINKS.map(({ label, href }) => (
@@ -97,7 +93,7 @@ export default function Navbar() {
                   <a
                     href={href}
                     onClick={close}
-                    className="text-white/80 text-sm tracking-[1.5px] uppercase font-semibold hover:text-gold-light transition-colors block"
+                    className="text-white/80 text-sm tracking-[2px] uppercase font-semibold hover:text-gold-light transition-colors block"
                   >
                     {label}
                   </a>
